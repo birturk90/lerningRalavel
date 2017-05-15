@@ -15,3 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/ralavel', "test@show"); 
+
+Route::get('/view', function ()    {
+    return view('showPage', ['name' => 'masume']);
+});
+Route::get('/controller/view', "showPage@projec");
