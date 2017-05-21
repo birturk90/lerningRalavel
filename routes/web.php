@@ -16,17 +16,22 @@ use App\student;
 Route::get('/', function () {
     return view('welcome');
 });
+//nahve route baraye controller
 Route::get('/ralavel', "test@show"); 
 
 Route::get('/view', function ()    {
     return view('showPage', ['name' => 'masume']);
 });
 Route::get('/controller/view', "showPage@projec");
+//dasresi b database va jadval ha az trigh laravel
+//
 Route::get('/hospital',function(){
     return hospital::all();
 });
 Route::get('/hospital/insert',"hospitalController@store");
 Route::get('/hospital/update',"hospitalController@update");
 Route::get('/student',function(){
-    return Student::all();
+    return student::all();
 });
+Route::get('/student/insert',"studentContoroller@store");
+Route::get('/student/update',"studentContoroller@update");
