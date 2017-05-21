@@ -27,12 +27,14 @@ class studentContoroller extends Controller
     }
     public function update(){
          $student = Student::where('id','1')->get()->first();
+          $student = Student::where('id','1') ->update(['name' => 'saba']);
+         
 dd($student);
-         $hospital->id = '4';
-        $hospital->name = 'saba';
-        $hospital->grade ='7';
-        $hospital->avrage= '14';
-        $hospital->save();    
+        //  $student->id = '1';
+        // $student->name = 'saba';
+        // $student->grade ='7';
+        // $student->avrage= '14';
+        // $student->save();    
 
     }
 }
