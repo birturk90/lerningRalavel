@@ -29,12 +29,11 @@ class studentContoroller extends Controller
          $student = Student::where('id','1')->get()->first();
           $student = Student::where('id','1') ->update(['name' => 'saba']);
          
-dd($student);
-        //  $student->id = '1';
-        // $student->name = 'saba';
-        // $student->grade ='7';
-        // $student->avrage= '14';
-        // $student->save();    
-
+//dd($student);
+      
     }
+     public function delet(){
+
+          $deletedRows = Student::where('id', '3')->delete();
+     }
 }

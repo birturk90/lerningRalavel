@@ -35,3 +35,4 @@ Route::get('/student',function(){
 });
 Route::get('/student/insert',"studentContoroller@store");
 Route::get('/student/update',"studentContoroller@update");
+Route::get('/student/delet',"studentContoroller@delet");
