@@ -1,5 +1,7 @@
 <?php
 
+use App\hospital;
+use App\student;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +22,11 @@ Route::get('/view', function ()    {
     return view('showPage', ['name' => 'masume']);
 });
 Route::get('/controller/view', "showPage@projec");
+Route::get('/hospital',function(){
+    return hospital::all();
+});
+Route::get('/hospital/insert',"hospitalController@store");
+Route::get('/hospital/update',"hospitalController@update");
+Route::get('/student',function(){
+    return Student::all();
+});
