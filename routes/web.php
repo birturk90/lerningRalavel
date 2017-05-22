@@ -1,7 +1,8 @@
 <?php
 
-use App\hospital;
-use App\student;
+//use App\hospital;
+//use App\student;
+use App\testes;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +37,5 @@ Route::get('/student',function(){
 Route::get('/student/insert',"studentContoroller@store");
 Route::get('/student/update',"studentContoroller@update");
 Route::get('/student/delet',"studentContoroller@delet");
+Route::get('/create',"testing@index");
+Route::post('/store',"testing@store");
