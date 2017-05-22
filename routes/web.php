@@ -1,6 +1,6 @@
 <?php
 
-//use App\hospital;
+//cuse App\hospital;
 //use App\student;
 use App\testes;
 /*
@@ -37,5 +37,6 @@ Route::get('/student',function(){
 Route::get('/student/insert',"studentContoroller@store");
 Route::get('/student/update',"studentContoroller@update");
 Route::get('/student/delet',"studentContoroller@delet");
-Route::get('/create',"testing@index");
-Route::post('/store',"testing@store");
+Route::get('/create',"controllerForm@index");
+Route::post('/store',"controllerForm@store");
+Route::get('/show',"controllerForm@show");
