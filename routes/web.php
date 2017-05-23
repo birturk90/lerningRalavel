@@ -40,3 +40,6 @@ Route::get('/student/delet',"studentContoroller@delet");
 Route::get('/create',"controllerForm@index");
 Route::post('/store',"controllerForm@store");
 Route::get('/show',"controllerForm@show");
+Route::get('/update',"controllerForm@update");
+Route::get('/delete',"controllerForm@delete");
+Route::get('/showtabel',"controllerForm@showtabel");

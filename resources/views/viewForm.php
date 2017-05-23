@@ -27,16 +27,30 @@
     <input type="submit" name="submit" value="submit"><br/><br/>
 
 </form>
-<form action="show" method="get">
+<!--<form action="show" method="get">
 
-    <label for="ID">ID</label>
+    <label for="ID">edited record id</label></br><br/>
     <input type="text" name="ID" value=""></br><br/>
     <label for=""></label>
-    <input type="submit" name="submit" value="ersal"><br/>
+    <input type="submit" name="submit" value="ersal"><br/></br><br/>
+</form>
+<form action="delete" method="get">
 
-   
+    <label for="id">deleted record id</label></br><br/>
+    <input type="text" name="id" value=""></br><br/>
+    <label for=""></label>
+    <input type="submit" name="submit" value="delete"><br/>
 
 
 </form>
+<form action="showtabel" method="get">
+
+    
+    <label for=""></label></br><br/>
+    <input type="submit" name="submit" value="showtabel"><br/>
+
+
+</form>-->
+
 </body>
 </html>

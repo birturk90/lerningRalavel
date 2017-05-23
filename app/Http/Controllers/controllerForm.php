@@ -36,10 +36,17 @@ class controllerForm extends Controller
      */
     public function store(Request $request)
     {
-       sabtnam::create(Request::all()); 
-       return 'data insert in tabel';
+       
+       sabtnam::create(Request::all());
+        return redirect('/showtabel');
+     
     }
-
+    public function showtabel (){
+          $all = sabtnam::get(); 
+     
+       return view("showalldb",["all"=>$all]);
+    }
+ 
     /**
      * Display the specified resource.
      *
@@ -50,7 +57,8 @@ class controllerForm extends Controller
     {
         $a=Request::all();
         $post = sabtnam::where('ID', $a["ID"])->first();
-        return $post;
+        return view("viewshowform",["post"=>$post]);
+         
     }
 
     /**
@@ -71,9 +79,12 @@ class controllerForm extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+         $a=Request::all();
+         //dd($a);
+         $a = sabtnam::where('id',$a['id']) ->update(['name' => $a["name"],'email' => $a["email"],'avrage' => $a["avrage"],'gender' => $a["gender"]]);
+          return redirect('/showtabel');
     }
 
     /**
@@ -82,8 +93,10 @@ class controllerForm extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete()
     {
-        //
+        $a=Request::all();
+         $deletedRows = sabtnam::where('id',$a['id'])->delete();
+          return redirect('/showtabel');
     }
 }
