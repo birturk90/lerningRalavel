@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Request;
 use APP\Http\Requests;
 use App\sabtnam;
+use Illuminate\Support\Facades\Validator;
 
 class controllerForm extends Controller
 {
@@ -37,6 +38,20 @@ class controllerForm extends Controller
     public function store(Request $request)
     {
        
+        $validator=validator::make(
+          Request::all(),
+            [
+            'name' => 'required|alpha|max:100',
+            'email' => 'required|email',
+            'avrage' => 'required|numeric',
+            'number' => 'required|numeric',
+            ]
+        );
+        if($validator->fails()){
+           $a= Request::all();
+            return view("viewForm",["errors"=>$validator->errors(),"a"=>$a]);
+
+        }
        sabtnam::create(Request::all());
         return redirect('/showtabel');
      
@@ -67,9 +82,21 @@ class controllerForm extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function validation (Request $request)
     {
-        //
+    // $validator=validator::make(
+    //    Request::all(),
+    //     [
+    //     'name' => 'required|unique|alpha_dash|max:100',
+    //     'email' => 'required|email',
+    //     'avrage' => 'required|',
+    //     'number' => 'required|numeric|max:6',
+    //     ]
+    // );
+    // if($validator->fails()){
+    //     return redirect()->back()=>withErrors($validator->errors())->withInput();
+    // }
+
     }
 
     /**

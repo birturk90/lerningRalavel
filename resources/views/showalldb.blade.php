@@ -28,7 +28,7 @@
 ?>
 
 </table>
- <a href="/create"><h>add newrecord to table</h></a> 
+ <a href="/create"><h>add new record to table</h></a> 
 </form>
 </body>
 </html>
