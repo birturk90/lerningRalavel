@@ -25,7 +25,6 @@ Route::get('/view', function ()    {
 });
 Route::get('/controller/view', "showPage@projec");
 //dasresi b database va jadval ha az trigh laravel
-//
 Route::get('/hospital',function(){
     return hospital::all();
 });
@@ -37,9 +36,12 @@ Route::get('/student',function(){
 Route::get('/student/insert',"studentContoroller@store");
 Route::get('/student/update',"studentContoroller@update");
 Route::get('/student/delet',"studentContoroller@delet");
+////form routs(ijad form sabt nam &insert,delete ,edite,validation)
 Route::get('/create',"controllerForm@index");
 Route::post('/store',"controllerForm@store");
 Route::get('/show',"controllerForm@show");
 Route::get('/update',"controllerForm@update");
 Route::get('/delete',"controllerForm@delete");
 Route::get('/showtabel',"controllerForm@showtabel");
+////restful
+Route::resource('tasks', 'webservice');

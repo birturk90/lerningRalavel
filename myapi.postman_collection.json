@@ -1,0 +1,151 @@
+{
+	"id": "d901d4d0-a082-359c-dc5d-6468cf498d1e",
+	"name": "myapi",
+	"description": "",
+	"order": [
+		"9a21c556-55e5-d072-0136-b19062d92128",
+		"7783e083-5944-7679-6a9c-6f2d94f74a41"
+	],
+	"folders": [],
+	"timestamp": 1495714130247,
+	"owner": "2116208",
+	"public": false,
+	"requests": [
+		{
+			"id": "7783e083-5944-7679-6a9c-6f2d94f74a41",
+			"headers": "",
+			"url": "localhost:8000\\tasks",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "d901d4d0-a082-359c-dc5d-6468cf498d1e",
+			"data": [
+				{
+					"key": "title",
+					"value": "starttask",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "time",
+					"value": "2",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "importance",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "store new task",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1495714341871,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "9a21c556-55e5-d072-0136-b19062d92128",
+			"headers": "",
+			"url": "localhost:8000\\tasks",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "d901d4d0-a082-359c-dc5d-6468cf498d1e",
+			"data": null,
+			"dataMode": "params",
+			"name": "show all tasks",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1495714130246,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 757,
+					"headers": [
+						{
+							"name": "Cache-Control",
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Thu, 25 May 2017 12:28:16 +0000, Thu, 25 May 2017 12:28:16 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Host",
+							"key": "Host",
+							"value": "localhost:8000",
+							"description": "Custom header"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.1",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[{\"id\":1,\"title\":\"starttask\",\"time\":\"2\",\"importance\":\"1\",\"created_at\":\"2017-05-25 12:26:53\",\"updated_at\":\"2017-05-25 12:26:53\"},{\"id\":2,\"title\":\"starttask\",\"time\":\"2\",\"importance\":\"1\",\"created_at\":\"2017-05-25 12:28:04\",\"updated_at\":\"2017-05-25 12:28:04\"}]",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "0969d645-0466-9817-e5e4-d0ed1ef51548",
+					"name": "get all tasks",
+					"request": {
+						"url": "localhost:8000\\tasks",
+						"headers": [],
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
