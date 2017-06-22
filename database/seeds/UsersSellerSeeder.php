@@ -11,14 +11,14 @@ class UsersSellerSeeder extends Seeder
      */
     public function run()
     {
-        $this->call('resellerSeed');
+        $this->call('seller');
 
         $this->command->info('User table seeded!');
     }
 
 }
 
-class resellerSeed extends Seeder {
+class seller extends Seeder {
 
     public function run()
     {
